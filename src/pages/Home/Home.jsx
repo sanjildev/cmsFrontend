@@ -8,10 +8,16 @@ import Footer from '../Footer/Footer'
 const Home = () => {
 
     const [blogs,setBlogs]=useState([])
-    const fetchBlogs=async()=>{
+  
+   const fetchBlogs=async()=>{
+
     const response=await axios.get('http://localhost:3000/blogs')   
     setBlogs(response.data.blogs)
-    }
+    
+
+  
+    } 
+   
 
     useEffect(()=>{
 fetchBlogs()
