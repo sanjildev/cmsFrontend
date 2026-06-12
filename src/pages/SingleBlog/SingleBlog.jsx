@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './SingleBlog.css'
 import Navbar from '../../components/Navbar/Navbar'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 const SingleBlog = () => {
   const navigate=useNavigate()
@@ -49,6 +49,7 @@ fetchSingleBlog()
 
     </div>
 <a onClick={deleteSingleBlog} className="btn">Delete Blog</a>
+<Link to={`/updateBlog/${singleBlog._id}`} className="btn">Update Blog</Link>
 </div> 
     </>
   )
